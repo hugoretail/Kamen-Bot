@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>604</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -77,5 +77,54 @@
   <tabstop>DiscussionHistory</tabstop>
  </tabstops>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>RecordAudio</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>RecordAudio</receiver>
+   <slot>toggle()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>405</x>
+     <y>509</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>503</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DiscussionDisplay</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>DiscussionDisplay</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>439</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>467</x>
+     <y>54</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DiscussionDisplay</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>DiscussionHistory</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>363</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>362</x>
+     <y>150</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
