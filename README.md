@@ -1,7 +1,6 @@
 References:
-- https://platform.openai.com/docs/guides/speech-to-text
-- https://platform.openai.com/docs/guides/text-generation
-- https://platform.openai.com/docs/guides/text-to-speech
+- https://cloud.google.com/speech-to-text
+- https://cloud.google.com/text-to-speech
 
 tools:
 - language = Python
@@ -10,5 +9,5 @@ tools:
     - Qt Designer
         - https://doc.qt.io/qt-5/qtdesigner-manual.html
         - https://realpython.com/learning-paths/pyqt-gui-programming/ (tutorial)
-- OpenAI
+- Google Cloud
 - pvrecorder
