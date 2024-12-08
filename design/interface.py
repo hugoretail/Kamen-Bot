@@ -31,18 +31,15 @@ class Ui_MainWindow(object):
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 28))
         self.menubar.setObjectName("menubar")
-        self.menutest = QtWidgets.QMenu(self.menubar)
-        self.menutest.setObjectName("menutest")
+        self.MenuMicrophone = QtWidgets.QMenu(self.menubar)
+        self.MenuMicrophone.setObjectName("MenuMicrophone")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
-        self.menubar.addAction(self.menutest.menuAction())
+        self.menubar.addAction(self.MenuMicrophone.menuAction())
 
         self.retranslateUi(MainWindow)
-        self.RecordAudio.clicked['bool'].connect(self.RecordAudio.toggle) # type: ignore
-        self.DiscussionDisplay.toggled['bool'].connect(self.DiscussionDisplay.setChecked) # type: ignore
-        self.DiscussionDisplay.toggled['bool'].connect(self.DiscussionHistory.setVisible) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.RecordAudio, self.DiscussionHistory)
 
@@ -51,14 +48,4 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.RecordAudio.setText(_translate("MainWindow", "Record Audio"))
         self.DiscussionDisplay.setText(_translate("MainWindow", "Display Discussion"))
-        self.menutest.setTitle(_translate("MainWindow", "Microphone"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+        self.MenuMicrophone.setTitle(_translate("MainWindow", "Microphone"))

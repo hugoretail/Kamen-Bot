@@ -2,6 +2,7 @@ from pvrecorder import PvRecorder
 from PyQt5.QtCore import QThread, pyqtSignal
 import wave
 import struct
+import time
 
 class RecorderThread(QThread):
     finished = pyqtSignal()
@@ -15,8 +16,13 @@ class RecorderThread(QThread):
     def run(self):
         self.audio = []
         self.recorder.start()
+        start_time = time.time()
 
         while self.recording:
+            if time.time() - start_time > 30:
+                self.stop()
+                break
+
             frame = self.recorder.read()
             self.audio.extend(frame)
 
