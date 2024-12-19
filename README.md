@@ -5,7 +5,7 @@ References:
 - https://cloud.google.com/speech-to-text
 - https://cloud.google.com/text-to-speech
 
-tools:
+Tools:
 - language = Python
 - interface = PyQt
 - deployment = PyInstaller
