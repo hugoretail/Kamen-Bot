@@ -2,8 +2,7 @@ This project requires an OpenAI API key to be used.
 A python bot using TTS and STT to have a real conversation with.
 
 References:
-- https://cloud.google.com/speech-to-text
-- https://cloud.google.com/text-to-speech
+- https://platform.openai.com/docs/overview
 
 Tools:
 - language = Python
